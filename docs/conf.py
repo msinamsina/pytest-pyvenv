@@ -17,7 +17,7 @@ def get_version():
 
 
 sys.path.insert(0, '../')
-project = 'pytest-env'
+project = 'pytest_env'
 copyright = '2024, Mohammad Sina Allahkaram'
 author = 'Mohammad Sina Allahkaram'
 release = get_version()

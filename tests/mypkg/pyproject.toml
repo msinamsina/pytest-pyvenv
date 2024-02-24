@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mypkg"
+description = "A package for create venv in tests"
+readme = "README.md"
+version = "0.1.0"
+
+[tool.setuptools]
+py-modules = ['myapp']
