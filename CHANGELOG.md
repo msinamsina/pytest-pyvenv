@@ -1,3 +1,9 @@
+## 0.1.5 (2024-02-24)
+
+### Fix
+
+- fix some bug in versioning
+
 ## 0.1.4 (2024-02-24)
 
 ### Fix
