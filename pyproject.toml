@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pytest-pyvenv"
+version = "0.1.4"
 dynamic = [
-    "version",
     "dependencies",
 ]
 description = "A package for create venv in tests"
@@ -24,7 +24,7 @@ classifiers = [
 "Change Log" = "https://github.com/msinamsina/pytest-pyvenv/blob/main/CHANGELOG.md"
 
 [project.entry-points.pytest11]
-pyvenv = "pytest_env.__init__"
+pyvenv = "pytest_pyvenv.__init__"
 
 [project.optional-dependencies]
 lint = [
@@ -50,7 +50,7 @@ cli = [
     "click"
 ]
 all = [
-    "pytest-env[lint,doc,test,cli]"
+    "pytest-pyvenv[lint,doc,test,cli]"
 ]
 
 [tool.setuptools.dynamic]
@@ -66,7 +66,7 @@ major_version_zero = true
 
 [tool.coverage.run]
 branch = true
-source = ["src/pytest_env"]
+source = ["src/pytest_pyvenv"]
 
 omit = [
     "docs/*",

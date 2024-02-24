@@ -1,6 +1,6 @@
 import pytest
 
-from src.pytest_env import VenvClass
+from src.pytest_pyvenv import VenvClass
 
 
 def test_install_package():

@@ -8,7 +8,7 @@ install:
 
 uninstall:
 	@echo "Uninstalling..."
-	pip uninstall -y pytest-env
+	pip uninstall -y pytest-pyvenv
 
 clean:
 	@echo "Cleaning..."
