@@ -1,3 +1,9 @@
+## 0.1.7 (2024-02-25)
+
+### Fix
+
+- **versioning**: docs release version is added to commitizen version_files
+
 ## 0.1.6 (2024-02-25)
 
 ### Fix
