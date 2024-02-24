@@ -1,0 +1,84 @@
+[build-system]
+requires = ["setuptools", "commitizen"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytest-env"
+dynamic = [
+    "version",
+    "dependencies",
+    ]
+description = "A package for create venv in tests"
+readme = "README.md"
+
+
+[project.optional-dependencies]
+lint = [
+    "flake8",
+    "flake8-bugbear",
+    "flake8-pyproject"
+    ]
+docs = [
+    "sphinx",
+    "sphinx_rtd_theme",
+    "recommonmark",
+    "tomlkit"
+    ]
+test = [
+    "pytest",
+    "pytest-mock",
+    "pytest-cookies",
+    "pytest-xdist",
+    "tox",
+    "coverage"
+    ]
+cli = [
+    "click"
+    ]
+all = [
+    "pytest-env[lint,doc,test,cli]"
+    ]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver"
+version = "0.0.0"
+update_changelog_on_bump = true
+major_version_zero = true
+
+[tool.coverage.run]
+branch = true
+source = "pytest-env"
+
+omit = [
+    "docs/*",
+    "tests/*",
+    ]
+
+[tool.coverage.report]
+# Regexes for lines to exclude from consideration
+exclude_also = [
+    # Don't complain about missing debug-only code:
+    "def __repr__",
+    "if self\\.debug",
+
+    # Don't complain if tests don't hit defensive assertion code:
+    "raise AssertionError",
+    "raise NotImplementedError",
+
+    # Don't complain if non-runnable code isn't run:
+    "if 0:",
+    "if __name__ == .__main__.:",
+
+    # Don't complain about abstract methods, they aren't run:
+    "@(abc\\.)?abstractmethod",
+    ]
+
+ignore_errors = true
+
+[tool.coverage.html]
+directory = "coverage_html_report"
