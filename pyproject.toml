@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pytest-pyvenv"
-version = "0.1.4"
+version = "0.1.5"
 dynamic = [
     "dependencies",
 ]
@@ -22,6 +22,8 @@ classifiers = [
 "Homepage" = "https://github.com/msinamsina/pytest-pyvenv"
 "Bug Tracker" = "https://github.com/msinamsina/pytest-pyvenv/issues"
 "Change Log" = "https://github.com/msinamsina/pytest-pyvenv/blob/main/CHANGELOG.md"
+
+
 
 [project.entry-points.pytest11]
 pyvenv = "pytest_pyvenv.__init__"
@@ -53,8 +55,10 @@ all = [
     "pytest-pyvenv[lint,doc,test,cli]"
 ]
 
+
 [tool.setuptools.dynamic]
 dependencies = { file = ["requirements.txt"] }
+
 
 [tool.commitizen]
 name = "cz_conventional_commits"
@@ -63,7 +67,11 @@ version_scheme = "semver"
 version = "0.1.5"
 update_changelog_on_bump = true
 major_version_zero = true
-
+version_files = [
+    "VERSION",
+    "setup.py",
+    "pyproject.toml:version"
+]
 [tool.coverage.run]
 branch = true
 source = ["src/pytest_pyvenv"]
