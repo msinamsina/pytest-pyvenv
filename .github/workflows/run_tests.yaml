@@ -25,9 +25,7 @@ jobs:
       - name: Install dependencies
         run: make install
       - name: Run tests
-        run: coverage run -m pytest tests -v -m "not slow"
-      - name: run_slow_tests
-        run: pytest tests -v -m slow
+        run: make coverage
 
   lint:
     runs-on: ubuntu-latest
