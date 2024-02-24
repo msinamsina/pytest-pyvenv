@@ -10,9 +10,8 @@ dynamic = [
 ]
 description = "A package for create venv in tests"
 readme = "README.md"
-license = "MIT"
 authors = [
-    "Mohammad Sina Allahkaram"
+    {name = "Mohammad Sina Allahkaram", email = "msinamsina@gmail.com"},
 ]
 
 classifiers = [
