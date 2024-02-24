@@ -3,7 +3,7 @@ requires = ["setuptools", "commitizen"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pytest-env"
+name = "pytest-pyvenv"
 dynamic = [
     "version",
     "dependencies",
