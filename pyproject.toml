@@ -68,7 +68,8 @@ version = "0.1.6"
 update_changelog_on_bump = true
 major_version_zero = true
 version_files = [
-    "pyproject.toml:version"
+    "pyproject.toml:version",
+    "docs/conf.py:release"
 ]
 [tool.coverage.run]
 branch = true

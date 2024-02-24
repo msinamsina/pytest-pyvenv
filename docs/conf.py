@@ -8,19 +8,11 @@
 import sys
 import tomlkit
 
-
-def get_version():
-    """Get the version from the pyproject.toml file."""
-    with open("../pyproject.toml") as f:
-        pyproject = tomlkit.parse(f.read())
-        return pyproject["tool"]["commitizen"]["version"]
-
-
 sys.path.insert(0, '../')
 project = 'pytest_env'
 copyright = '2024, Mohammad Sina Allahkaram'
 author = 'Mohammad Sina Allahkaram'
-release = get_version()
+release = '0.1.6'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
