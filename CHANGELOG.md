@@ -1,3 +1,9 @@
+## 0.1.2 (2024-02-24)
+
+### Fix
+
+- **README-&-pyproject**: change name and add urls to project
+
 ## 0.1.1 (2024-02-24)
 
 ### Fix
