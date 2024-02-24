@@ -10,6 +10,14 @@ dynamic = [
     ]
 description = "A package for create venv in tests"
 readme = "README.md"
+license = "MIT"
+authors = [
+    "Mohammad Sina Allahkaram"
+    ]
+[project.urls]
+"Homepage" = "https://github.com/msinamsina/pytest-pyvenv"
+"Bug Tracker" = "https://github.com/msinamsina/pytest-pyvenv/issues"
+"Change Log" = "https://github.com/msinamsina/pytest-pyvenv/blob/main/CHANGELOG.md"
 
 classifiers = [
     "Framework :: Pytest",

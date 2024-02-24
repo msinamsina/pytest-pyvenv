@@ -8,13 +8,13 @@ variables for your tests.
 ### From PyPI
 
 ```bash
-pip install pytest-env
+pip install pytest-pyvenv
 ```
 
 ### From Source
 
 ```bash
-pip install git+https://github.com/msinamsina/pytest-env.git
+pip install git+https://github.com/msinamsina/pytest-pyvenv.git
 ```
 
 
@@ -23,7 +23,7 @@ pip install git+https://github.com/msinamsina/pytest-env.git
 ```python
 
 def test_env(pyvenv):
-    pyvenv.install_package('pytest-env')
+    pyvenv.install_package('pytest-pyvenv')
     pyvenv.run('mkdir -p tests')
 ```
 
