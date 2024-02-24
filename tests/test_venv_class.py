@@ -1,3 +1,5 @@
+import pytest
+
 from src.pytest_env import VenvClass
 
 
@@ -22,6 +24,7 @@ def test_fixture_install_package(pyvenv):
     assert pyvenv.run("pip show mypkg").returncode == 0
 
 
+@pytest.mark.slow
 def test_install_package_with_options():
     with VenvClass() as venv:
         # check mypkg is not installed
