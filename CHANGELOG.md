@@ -1,3 +1,9 @@
+## 0.2.2 (2024-02-25)
+
+### Fix
+
+- **publish**: publish on release created
+
 ## 0.2.1 (2024-02-25)
 
 ### Fix
