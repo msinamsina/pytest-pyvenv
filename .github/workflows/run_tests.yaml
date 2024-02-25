@@ -3,7 +3,8 @@ name: Code Quality Checks
 
 on:
   push:
-    branches
+    branches:
+      - "*"
 
 jobs:
   build:
