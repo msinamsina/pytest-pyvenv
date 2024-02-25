@@ -1,3 +1,9 @@
+## 0.2.0 (2024-02-25)
+
+### Feat
+
+- inside_dir and run_inside_dir function are added
+
 ## 0.1.9 (2024-02-25)
 
 ### Fix
