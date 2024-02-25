@@ -1,9 +1,45 @@
-import pytest
 import os
+import platform
 import subprocess
 import tempfile
+from contextlib import contextmanager
+
+import pytest
 from cookiecutter.utils import rmtree
-import platform
+
+
+@contextmanager
+def inside_dir(dirpath):
+    """
+    Execute code from inside the given directory
+
+    Parameters
+    ----------
+    dirpath : str
+        Path of the directory the command is being run.
+    """
+    old_path = os.getcwd()
+    try:
+        os.chdir(dirpath)
+        yield
+    finally:
+        os.chdir(old_path)
+
+
+def run_inside_dir(command, dirpath):
+    """
+    Run a command from inside a given directory, returning the exit status
+
+    Parameters
+    ----------
+    command : str
+        Command that will be executed
+    dirpath : str
+        Path of the directory the command is being run.
+    """
+    with inside_dir(dirpath):
+        return subprocess.run(shlex.split(command),
+                              shell=True, executable="/bin/bash")
 
 
 @pytest.fixture
