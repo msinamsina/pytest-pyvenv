@@ -1,7 +1,6 @@
 # Pytest-pyvenv
 
-This is a simple plugin for pytest that allows you to set environment
-variables for your tests.
+This is a simple plugin for [pytest](https://docs.pytest.org/) that allows you to create a virtual environment inside the tests.
 
 ## Installation
 
