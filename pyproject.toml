@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pytest-pyvenv"
-version = "0.2.2"
+version = "0.2.3"
 dynamic = [
     "dependencies",
 ]
@@ -64,7 +64,7 @@ dependencies = { file = ["requirements.txt"] }
 name = "cz_conventional_commits"
 tag_format = "$version"
 version_scheme = "semver"
-version = "0.2.2"
+version = "0.2.3"
 update_changelog_on_bump = true
 major_version_zero = true
 version_files = [

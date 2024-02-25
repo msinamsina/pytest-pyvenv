@@ -1,3 +1,10 @@
+## 0.2.3 (2024-02-25)
+
+### Fix
+
+- fix ci
+- PERSONAL_ACCESS_TOKEN
+
 ## 0.2.2 (2024-02-25)
 
 ### Fix

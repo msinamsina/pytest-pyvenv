@@ -12,7 +12,7 @@ sys.path.insert(0, '../')
 project = 'pytest_env'
 copyright = '2024, Mohammad Sina Allahkaram'
 author = 'Mohammad Sina Allahkaram'
-release = '0.2.2'
+release = '0.2.3'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
