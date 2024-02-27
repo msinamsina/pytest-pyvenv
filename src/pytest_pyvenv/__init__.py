@@ -1,11 +1,13 @@
 import os
 import platform
+import shlex
 import subprocess
 import tempfile
 from contextlib import contextmanager
 
 import pytest
 from cookiecutter.utils import rmtree
+
 
 
 @contextmanager
@@ -38,8 +40,7 @@ def run_inside_dir(command, dirpath):
         Path of the directory the command is being run.
     """
     with inside_dir(dirpath):
-        return subprocess.run(shlex.split(command),
-                              shell=True, executable="/bin/bash")
+        return subprocess.run(shlex.split(command), shell=True)
 
 
 @pytest.fixture
@@ -61,7 +62,9 @@ class VenvClass:
         else:
             raise FileNotFoundError("Python path not found")
         print(f"Python path: {python_path}")
+        python_path = os.path.abspath(python_path)
         self.python_path = python_path.replace(os.sep, "/")
+        venv_dir = os.path.abspath(venv_dir)
         self.env_dir = venv_dir.replace(os.sep, "/")
         if os.name == "nt":
             # Windows
@@ -73,6 +76,8 @@ class VenvClass:
             print(os.listdir(os.path.abspath(venv_dir)))
             print(os.listdir(os.path.join(venv_dir, "bin")))
             self.activator = self.activator
+
+        self.activator = f"\"{self.activator}\""
 
     def __del__(self):
         print(f"Deleting virtual environment in {self.env_dir}")
